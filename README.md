@@ -1,6 +1,6 @@
 # ItKariera
   * [I](#I)
-   * [Introduction](#Увод в програмирането)
+   * [Introduction](#Introduction)
     
   * [II](#II)
    
