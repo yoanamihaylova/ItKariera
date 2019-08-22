@@ -1,4 +1,4 @@
-# ItKariera
+# Ит Кариера
   * [I](#I)
       * [Увод в програмирането](#IntroductionInProgramming)
       * [Програмиране](#Programing)
