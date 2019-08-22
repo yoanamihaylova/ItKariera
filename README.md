@@ -6,4 +6,5 @@
       * [Увод в алгоритми и структури от данни](#IntroductionInAlgorithmsAndDataStructures)
     
   * [II](#II)
+       * [ООП](#OOP)
    
