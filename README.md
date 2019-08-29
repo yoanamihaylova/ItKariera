@@ -1,10 +1,10 @@
 # Ит Кариера
   * [I](./I)
       * [Увод в програмирането](./I/IntroductionToProgramming)
-      * [Програмиране](#Programming)
-      * [Увод в ООП](#IntroductionToOOP)
-      * [Увод в алгоритми и структури от данни](#IntroductionToAlgorithmsAndDataStructures)
+      * [Програмиране](./I/Programming)
+      * [Увод в ООП](./I/IntroductionToOOP)
+      * [Увод в алгоритми и структури от данни](./I/IntroductionToAlgorithmsAndDataStructures)
     
   * [II](.II)
-       * [ООП](#OOP)
+       * [ООП](./I/OOP)
    
