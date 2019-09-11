@@ -36,6 +36,6 @@ namespace AxeTests
             //Assert
             var ex = Assert.Throws<InvalidOperationException>(() => axe.Attack(dummy));
             Assert.That(ex.Message, Is.EqualTo("Axe is broken."));
-        }
+        } 
     }
 }
