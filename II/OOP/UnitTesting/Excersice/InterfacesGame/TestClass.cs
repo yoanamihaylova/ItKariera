@@ -2,6 +2,7 @@
 // See documentation : https://github.com/nunit/docs/wiki/NUnit-Documentation
 using System.Collections;
 using System.Collections.Generic;
+using Moq;
 using NUnit.Framework;
 using Skeleton;
 using Skeleton.Interfaces;
@@ -20,7 +21,7 @@ namespace TestInterfaces
         }
         private const string HeroName = "Pesho";
 
-        [Test]
+     /*   [Test]
         public void HeroGainsExperienceAfterAttackIfTargetDies()
         {
             ITarget fakeTarget = new FakeTarget();
@@ -30,7 +31,27 @@ namespace TestInterfaces
             hero.Attack(fakeTarget);
 
             Assert.AreEqual(20, hero.Experience, "Hero doesn't gain expirience.");
+        }*/
+
+        [Test]
+        public void HeroGainsExperienceAfterAttackIfTargetDies()
+        {
+            //Arrange
+            Mock<ITarget> fakeTarget = new Mock<ITarget>();
+            fakeTarget.Setup(p => p.Health).Returns(0);
+            fakeTarget.Setup(p => p.GiveExperience()).Returns(20);
+            fakeTarget.Setup(p => p.IsDead()).Returns(true);
+
+            Mock<IWeapon> fakeWeapon = new Mock<IWeapon>();
+            Hero hero = new Hero("Pesho", fakeWeapon.Object);
+            
+            //Act
+            hero.Attack(fakeTarget.Object);
+
+            //Assert
+            Assert.AreEqual(20, hero.Experience);
         }
+
 
     }
 }
