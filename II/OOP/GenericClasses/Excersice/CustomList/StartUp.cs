@@ -12,43 +12,44 @@ namespace CustomList
         {
             string []line = Console.ReadLine().Split(' ').ToArray();
             CustomList<string> list = new CustomList<string>();
-            while (line[0] != "END")
+            string command = "";
+            ImprovedList<string> list = new ImprovedList<string>();
+            while ((command=Console.ReadLine())!="END")
             {
-                
-                if(line[0] == "Add")
+               var line=command.Split();
+                if (line[0]=="Add")
                 {
                     list.Add(line[1]);
                 }
-                else if(line[0] == "Remove")
+                if (line[0]== "Remove")
                 {
-                    Console.WriteLine(list.Remove(int.Parse(line[1]))); 
+                    Console.WriteLine( list.Remove(int.Parse(line[1])) );
                 }
-                else if(line[0] == "Conatins")
+                if (line[0]== "Contains")
                 {
-                    Console.WriteLine(list.Contains(line[1])); 
+                    Console.WriteLine(  list.Contains(line[1]));
                 }
-                else if(line[0] == "Swap")
+                if (line[0]== "Swap")
                 {
-                    list.Swap((int.Parse(line[1])), (int.Parse(line[2])));
+                    list.Swap(int.Parse(line[1]), int.Parse(line[2]));
                 }
-                else if(line[0] == "Greater")
+                if (line[0]== "Greater")
                 {
-                    Console.WriteLine( list.CountGreaterThan(line[1]) ); 
+                    Console.WriteLine(list.CountGreaterThan(line[1]));
                 }
-                else if(line[0] == "Max")
+                if (line[0]== "Max")
                 {
-                    Console.WriteLine( list.Max());
+                    Console.WriteLine(list.Max());
                 }
-                else if(line[0] == "Min")
+                if (line[0]== "Min")
                 {
-                    Console.WriteLine( list.Min() ); 
+                    Console.WriteLine(list.Min());
+                    
                 }
-                else if(line[0] == "Print")
+                if (line[0]== "Print")
                 {
-                    list.ToString();
+                    Console.WriteLine(list);
                 }
-                line = Console.ReadLine().Split(' ').ToArray();
-            }
         }
     }
 }
