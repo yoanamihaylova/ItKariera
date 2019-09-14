@@ -10,13 +10,11 @@ namespace CustomList
     {
         static void Main(string[] args)
         {
-            string []line = Console.ReadLine().Split(' ').ToArray();
             CustomList<string> list = new CustomList<string>();
             string command = "";
-            ImprovedList<string> list = new ImprovedList<string>();
             while ((command=Console.ReadLine())!="END")
             {
-               var line=command.Split();
+                var line=command.Split();
                 if (line[0]=="Add")
                 {
                     list.Add(line[1]);
