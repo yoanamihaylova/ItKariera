@@ -66,7 +66,7 @@ namespace CustomList
             string temp = "";
             foreach (var item in list)
             {
-                temp += $"{item}";
+                temp += $"{item}" + Environment.NewLine;
             }
             return temp;
         }
