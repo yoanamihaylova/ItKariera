@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CustomList
 {
-    public class CustomList<T> where T : IComparable<T>
+    public class CustomList<T> : IEnumerable<T> where T : IComparable<T> 
     {
         private List<T> list ;
 
@@ -69,6 +70,23 @@ namespace CustomList
                 temp += $"{item}" + Environment.NewLine;
             }
             return temp;
+        }
+        public void Sort()
+        {
+            list = list.OrderBy(x => x).ToList();
+        }
+
+        public IEnumerator<T> GetEnumerator()
+        {
+            for (int i = 0; i < list.Count; i++)
+            {
+                yield return this.list[i]; // return-ва и продължава
+            }
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -48,6 +48,10 @@ namespace CustomList
                 {
                     Console.WriteLine(list);
                 }
+                if(line[0] == "Sort")
+                {
+                    list.Sort();
+                }
             }
         }
     }
