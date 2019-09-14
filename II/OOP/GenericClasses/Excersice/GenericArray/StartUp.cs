@@ -15,6 +15,9 @@ namespace GenericArray
 
             Scale<int> scale = new Scale<int>(3, 6);
             Console.WriteLine(scale.GetHeavier());
+
+            Scale<char> scale2 = new Scale<char>('h', 'h');
+            Console.WriteLine(scale2.GetHeavier());
         }
     }
 }
