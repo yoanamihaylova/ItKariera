@@ -15,5 +15,9 @@ namespace FunctionsTesting
             Action<string> print = meseage => Console.WriteLine(meseage);
             print("Hello,world!");
         }
+        private static int Operation(int number, Func<int, int> operation)
+        {
+            return operation(number);
+        }
     }
 }
