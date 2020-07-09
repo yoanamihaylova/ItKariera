@@ -9,4 +9,5 @@
        * [ООП](./II/OOP)
        * [База Данни](./II/DataBase)
        * [Разработка на софтуер](./II/SoftwareDeveloping)
+       * [Въведение в Операционни системи и Вградени системи](./II/IntroducingToOperatingSystemsAndSystemIntegration)
    
