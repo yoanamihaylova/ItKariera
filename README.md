@@ -10,4 +10,5 @@
        * [База Данни](./II/DataBase)
        * [Разработка на софтуер](./II/SoftwareDeveloping)
        * [Въведение в Операционни системи и Вградени системи](./II/IntroducingToOperatingSystemsAndSystemIntegration)
-   
+ * [III](./III)
+       * [Алгоритми и структури от данни](./III/AlgorithmsAndDataStructures)
