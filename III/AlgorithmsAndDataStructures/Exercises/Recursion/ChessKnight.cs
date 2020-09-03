@@ -21,12 +21,13 @@ namespace Horses
                 Print();
                 return;
             }
-            if (row < 0 || row >= n || col < 0 || col >= n) return;
-            if (board[row, col] > 0) return;
 
             current++;
             board[row, col] = current;
-            Knight(row - 2, col + 1);
+
+            if (OnBoard(row - 2, col + 1) && Availability(row - 2, col + 1))
+                Knight(row - 2, col + 1);
+
             Knight(row - 1, col + 2);
             Knight(row + 1, col + 2);
             Knight(row + 2, col + 1);
@@ -37,7 +38,14 @@ namespace Horses
             current--;
             board[row, col] = 0;
         }
-
+        static bool OnBoard(int row, int col)
+        {
+            return (row >= 0 && row < n) && (col >= 0 && col < n);
+        }
+        static bool Availability(int row, int col)
+        {
+            return board[row, col] == 0;
+        }
         private static void Print()
         {
             count++;
