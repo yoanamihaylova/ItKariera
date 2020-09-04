@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Linq;
 
-namespace Permutation
+namespace Variations
 {
-    class Permutations
+    class Variations
     {
         static bool[] used;
         static int[] var;
